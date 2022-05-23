@@ -1,0 +1,9 @@
+table users {
+  id uuid [pk]
+  name varchar
+  email varchar
+  password varchar
+  deleted_at datetime
+  created_at datetime
+  updated_at datetime
+}

@@ -1,0 +1,72 @@
+InputUpdateProfile:
+  type: object
+  required: 
+    - name
+    - email
+  properties:
+    name:
+      type: string
+      example: Yehezkiel Saragih
+    email:
+      type: string
+      example: yehezkielsr@example.com
+
+InputUpdatePassword:
+  type: object
+  required: 
+    - password
+    - password_confirmation
+  properties:
+    password:
+      type: string
+      example: example123!
+    password_confirmation:
+      type: string
+      example: example123!
+
+InputCreate:
+  type: object
+  required: 
+    - name
+    - email
+    - password
+    - password_confirmation
+  properties:
+    name:
+      type: string
+      example: Yehezkiel Saragih
+    email:
+      type: string
+      example: yehezkielsr@example.com
+    password:
+      type: string
+      example: example123!
+    password_confirmation:
+      type: string
+      example: example123!
+
+InputLogin:
+  type: object
+  required: 
+    - email
+    - password
+  properties:
+    email:
+      type: string
+      example: yehezkielsr@example.com
+    password:
+      type: string
+      example: example123!
+
+UserDetail:
+  type: object
+  properties:
+    id:
+      type: string
+      example: abd121e8-dumm-dumm-dumm-dummycreated
+    name:
+      type: string
+      example: Yehezkiel Saragih
+    email:
+      type: string
+      example: yehezkielsr@example.com

@@ -1,0 +1,28 @@
+openapi: '3.0.2'
+info:
+  title: GORM MVC API
+  version: '1.0'
+servers:
+  - url: https://api.server.test/v1
+    description: Example Mock Server
+  - url: http://localhost:4010
+    description: Local Mock Server by Prism
+paths:
+  /api/users:
+    $ref: 'components/path-definitions/users/index.yml'
+  /api/users/d/:id:
+    $ref: 'components/path-definitions/users/{user_id}.yml'
+  /api/users/p/:id:
+    $ref: 'components/path-definitions/users/profile/{user_id}.yml'
+  /api/users/s/:id:
+    $ref: 'components/path-definitions/users/security/{user_id}.yml'
+  /api/login:
+    $ref: 'components/path-definitions/login.yml'
+  /api/register:
+    $ref: 'components/path-definitions/register.yml'
+components:
+  securitySchemes:
+    cookieAuth:         # arbitrary name for the security scheme; will be used in the "security" key later
+      type: apiKey
+      in: cookie
+      name: token

@@ -1,0 +1,35 @@
+get:
+  security:
+    - cookieAuth: []
+  responses:
+    '200':
+      description: ok
+      content: 
+        application/json:
+          schema:
+            allOf:
+              - $ref: '../../schemas/Responses.yml#/Meta200'
+              - type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '../../schemas/User.yml#/UserDetail'
+    '400':
+      description: bad request
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/Responses.yml#/Meta400'
+    '401':
+      description: unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/Responses.yml#/Meta401'
+    '500':
+      description: internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '../../schemas/Responses.yml#/Meta500'
